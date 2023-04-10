@@ -1,4 +1,4 @@
 FROM openjdk:17
-WORKDIR /app
-COPY target/backend-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java", "-jar", "app.jar"]
+WORKDIR /backend-0.0.1
+COPY target/backend-0.0.1-SNAPSHOT.jar backend-0.0.1.jar
+ENTRYPOINT ["java", "-jar", "backend-0.0.1.jar"]
