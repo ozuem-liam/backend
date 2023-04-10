@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/fundall
-    username: postgres
-    password: williams
+    url: jdbc:postgresql://dpg-cgprvipeuhlq287f4rvg-a.oregon-postgres.render.com:5432/fundall
+    username: fundall_user
+    password: Xe4S5lpv7iBkJpQFAaA24IMawzgpy4NP
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
