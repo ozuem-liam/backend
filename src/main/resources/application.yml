@@ -13,9 +13,6 @@ spring:
         format_sql: true
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-paystack:
-  api:
-    key: sk_live_3316383314f3962146266593dca6f4420472a74e
 # logging:
 #   level:
 #     org.springframework: INFO
