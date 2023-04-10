@@ -10,7 +10,7 @@ RUN mvn package -DskipTests
 
 # Use adoptopenjdk/openjdk17 image as a base image for the runtime.
 # https://hub.docker.com/r/adoptopenjdk/openjdk17
-FROM adoptopenjdk/openjdk17:alpine-jre
+FROM adoptopenjdk/openjdk10:alpine-slim
 
 # Set the current working directory inside the container.
 WORKDIR /app
