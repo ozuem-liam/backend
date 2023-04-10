@@ -1,7 +1,8 @@
 #
 # Build stage
 #
-FROM maven:3.9.1-jdk-11 AS build
+FROM openjdk:11-jdk AS build
+RUN apt-get update && apt-get install -y maven=3.9.1-5
 COPY . .
 RUN mvn clean package -DskipTests
 
