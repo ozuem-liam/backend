@@ -1,9 +1,10 @@
 #
 # Build stage
 #
-FROM maven:3.8.2-jdk-11 AS build
+FROM maven:3.9.1-jdk-11 AS build
 COPY . .
-RUN mvn clean package -DskipTests
+RUN apt-get update && apt-get install -y git \
+    && mvn clean package -DskipTests
 
 #
 # Package stage
