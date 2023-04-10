@@ -1,7 +1,8 @@
 #
 # Build stage
 #
-FROM maven:3.8.2-jdk-11 AS build
+FROM openjdk:11-jdk-slim AS build
+RUN apt-get update && apt-get install -y maven
 COPY . .
 RUN mvn clean package -DskipTests
 
