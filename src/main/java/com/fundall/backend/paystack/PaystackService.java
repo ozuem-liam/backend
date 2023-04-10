@@ -10,6 +10,7 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.fundall.backend.user.User;
@@ -23,7 +24,8 @@ public class PaystackService {
 
     private static final Logger logger = LoggerFactory.getLogger(PaystackService.class);
 
-    private static final String API_KEY = "sk_live_3316383314f3962146266593dca6f4420472a74e";
+    @Value("${API_KEY}")
+    private String API_KEY;
     private static final String INITIALIZE_URL = "https://api.paystack.co/transaction/initialize";
     private static final String VERIFY_URL = "https://api.paystack.co/transaction/verify/";
 
