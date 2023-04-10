@@ -10,7 +10,7 @@ RUN mvn package -DskipTests
 
 # Use liamoz/backend-0.0.1 image as a base image for the runtime.
 # https://hub.docker.com/r/liamoz/backend-0.0.1
-FROM liamoz/backend-0.0.1
+FROM openjdk:17
 
 # Set the current working directory inside the container.
 WORKDIR /app
