@@ -1,0 +1,57 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fundall
+    username: postgres
+    password: williams
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+paystack:
+  api:
+    key: sk_live_3316383314f3962146266593dca6f4420472a74e
+# logging:
+#   level:
+#     org.springframework: INFO
+#     com.example: DEBUG
+#   file:
+#     name: myapp.log
+#     path: /var/log/myapp/
+#   pattern:
+#     console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
+#     file: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
+#   configuration:
+#     # Log4jdbc configuration
+#     name: jdbc
+#     appenders:
+#       - database
+#     properties:
+#       databaseUrl: jdbc:postgresql://localhost:5432/fundall
+#       username: postgres
+#       password: williams
+#       driverClass: org.postgresql.Driver
+#       sql: INSERT INTO logs (date, level, logger, message) VALUES (?, ?, ?, ?)
+#     appenders:
+#       database:
+#         type: JDBC
+#         dataSource:
+#           type: DataSource
+#           properties:
+#             url: ${logging.configuration.properties.databaseUrl}
+#             user: ${logging.configuration.properties.username}
+#             password: ${logging.configuration.properties.password}
+#             driverClassName: ${logging.configuration.properties.driverClass}
+#         connectionSource: DriverManagerConnectionSource
+#         connectionSource.driverClassName: ${logging.configuration.properties.driverClass}
+#         connectionSource.url: ${logging.configuration.properties.databaseUrl}
+#         connectionSource.username: ${logging.configuration.properties.username}
+#         connectionSource.password: ${logging.configuration.properties.password}
+#         bufferSize: 1
+#         ignoreExceptions: false
+#         sql: ${logging.configuration.properties.sql}
